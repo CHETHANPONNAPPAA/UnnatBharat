@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SchemeSathi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  
+  <div class="header">
+    <div class="logo-group">
+      <div class="logo-icon">Ub</div>
+      <span class="logo-text"><span>Unnat</span> Bharat</span>
+    </div>
+
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showTab('chat')">Chat</button>
+      <button class="nav-tab" onclick="showTab('analytics')">Analytics</button>
+    </div>
+
+    <div class="status-pill">
+      <div class="dot"></div> Live · Govt NLP Bot
+    </div>
+  </div>
+
+  
+  <div class="body">
+
+    
+    <div class="sidebar">
+      <button class="new-chat-btn" onclick="newChat()">+ New Chat</button>
+
+    </div>
+
+    
+    <div class="chat-main">
+
+      <div id="chatView" class="tab-view">
+        <!-- Banner -->
+        <div class="domain-banner">
+          <span class="domain-badge badge-purple">Govt Schemes</span>
+          <span class="domain-badge badge-teal">NLP</span>
+          <span class="domain-desc">Find schemes, eligibility & application steps</span>
+        </div>
+
+        
+        <div id="messages" class="messages"></div>
+
+        
+        <div class="input-area">
+          <div class="input-row">
+            <textarea id="inputBox" class="input-box" placeholder="Ask about government schemes..."></textarea>
+            <button class="send-btn">Send</button>
+          </div>
+
+          <div class="input-hints">
+            <span class="hint-chip" onclick="quickMsg('I am a farmer')">Farmer schemes</span>
+            <span class="hint-chip" onclick="quickMsg('health insurance schemes')">Health schemes</span>
+            <span class="hint-chip" onclick="quickMsg('housing schemes')">Housing</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="analyticsView" class="tab-view hidden">
+        <div class="analytics-header">
+          <h2>Analytics</h2>
+          <p>Live usage statistics for your SchemeSathi chat.</p>
+        </div>
+
+        <div class="analytics-grid">
+          <div class="analytics-card">
+            <div class="card-title">Total Messages</div>
+            <div id="analyticsMessageCount" class="card-value">0</div>
+          </div>
+          <div class="analytics-card">
+            <div class="card-title">Valid Queries</div>
+            <div id="analyticsValidCount" class="card-value">0</div>
+          </div>
+          <div class="analytics-card">
+            <div class="card-title">Invalid Inputs</div>
+            <div id="analyticsInvalidCount" class="card-value">0</div>
+          </div>
+          <div class="analytics-card">
+            <div class="card-title">Recent Queries</div>
+            <div id="analyticsRecentQueries" class="card-value small-text">No queries yet.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+   
+    <div class="right-panel">
+      <div class="panel-section-title">NLP Pipeline</div>
+
+      <div class="pipeline-step"><span>Intent Detection</span></div>
+      <div class="pipeline-step"><span>NER</span></div>
+      <div class="pipeline-step"><span>Similarity Search</span></div>
+
+      <div class="panel-section-title">Stats</div>
+      <div id="msgCount">Messages: 0</div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

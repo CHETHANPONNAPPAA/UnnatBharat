@@ -1,0 +1,6 @@
+flask
+flask-cors
+scikit-learn
+pandas
+spacy==3.7.2
+numpy
